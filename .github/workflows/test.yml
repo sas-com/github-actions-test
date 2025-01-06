@@ -11,6 +11,8 @@ jobs:
   build:
     # Runnerを指定
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     # Step
     steps:
       # コードチェックアウト
