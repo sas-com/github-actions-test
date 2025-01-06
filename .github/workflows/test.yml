@@ -30,8 +30,8 @@ jobs:
       # フォーマッター実行
       - name: Run Eclipse Formatter
         run: |
-          mvn net.revelc.code.formatter:formatter-maven-plugin:format
-          mvn net.revelc.code.formatter:formatter-maven-plugin:validate
+          mvn formatter:format
+          mvn formatter:validate
       # フォーマッターによる変更を自動コミット
       - name: Commit formatted code
         uses: stefanzweifel/git-auto-commit-action@v5
