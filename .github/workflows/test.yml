@@ -27,6 +27,11 @@ jobs:
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
         working-directory: ./
+      - name: Run Eclipse Formatter
+        run: |
+          # Eclipse Formatterを実行するためのコマンド
+          mvn com.github.eclipse-code-formatter:eclipse-code-formatter-maven-plugin:format \
+            -DformatterConfigFile=.github/formatter/eclipse-java-style.xml
       # Test実行
       - name: Test with Maven
         run: mvn --batch-mode test
