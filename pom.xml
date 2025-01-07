@@ -180,6 +180,9 @@
                 <version>2.24.1</version>
                 <configuration>
                     <configFile>${project.basedir}/.github/formatter/eclipse_format.xml</configFile>
+					<directories>
+						<directory>${project.build.sourceDirectory}</directory>
+					</directories>
                 </configuration>
             </plugin>
 		</plugins>
